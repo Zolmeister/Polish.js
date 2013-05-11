@@ -11,37 +11,26 @@ require('polish')
 
 ####browser
 <pre>
-//browser (1.43 KB minified & gzipped)
+//browser (1.45 KB minified & gzipped)
 &lt;script src='polish.js'>&lt;/script>
 </pre>
 
 ##Features
+####Array operations
+<pre>
+list = [1,2,3,4,5]
+list.pop(1) == 2 //list == [1,3,4,5]    pops index
+list.remove(2) //list == [1,3,4,5]      removes element
+list.insert(2,5) //list == [1,2,5,3,4,5]
+</pre>
+
 ####Use Math min/max with lists
 <pre>
 Math.min([1,2,3]) == 1
 Math.max([1,2,3]) == 3
 </pre>
 
-####global functions
-<pre>
-range(1,4) == [1,2,3]
-range(6,1,-2) == [6,4,2]
-</pre>
-<pre>
-sum([1,2,3]) == 6
-</pre>
-<pre>
-abs(-5) == 5
-</pre>
-<pre>
-//stringifies object, then parses it
-clone({'a':{'b':{'c':{}}}}) == {'a':{'b':'c':{}}}
-</pre>
-<pre>
-zip([[1,2],[3,4],[5,6]]) == [[1,3,5],[2,4,6]]
-</pre>
-
-####Random functions
+####Randomness functions
 <pre>
 Math.randInt(100) // random int from 0,100 inclusive
 [1,2,3].choice() //random object from list
@@ -50,19 +39,13 @@ Math.randInt(100) // random int from 0,100 inclusive
 "abc".shuffle() //returns new shuffled string
 </pre>
 
-####Itertools
+####global functions
 <pre>
-itertools.combinations([1,2,3],2) == [[1,2],[1,3],[2,3]]
-itertools.combinations_with_replacement("abc",2) == [['a','a'],['a','b'], ... , ['c','c']]
-itertools.permutations([1,2]) == [[1,2],[2,1]]
+range(1,4) == [1,2,3]
+range(6,1,-2) == [6,4,2]
 </pre>
-
-####Array operations
 <pre>
-list = [1,2,3,4,5]
-list.pop(1) == 2 //list == [1,3,4,5]    pops index
-list.remove(2) //list == [1,3,4,5]      removes element
-list.insert(2,5) //list == [1,2,5,3,4,5]
+zip([[1,2],[3,4],[5,6]]) == [[1,3,5],[2,4,6]]
 </pre>
 
 ####Python list/string selectors
@@ -82,20 +65,26 @@ str.g('3:1:-1') == "dc"
 list[-1] == 5
 </pre>
 
-####Reverse Strings
+####Itertools
 <pre>
-"abc".reverse() == "cba"
+Polish.combinations([1,2,3],2) == [[1,2],[1,3],[2,3]]
+Polish.combinationsReplace("abc",2) == [['a','a'],['a','b'], ... , ['c','c']]
+Polish.permutations([1,2]) == [[1,2],[2,1]]
 </pre>
 
-####Math factorial and prime functions
+####Math functions
 <pre>
+Math.sum([1,2,3]) == 6
 Math.factorial(10) == 3628800
 Math.isPrime(23) == true
+Math.leastFactor(25) == 5
 </pre>
 
-####Default Strings
+####Strings
 <pre>
-strings
+"abc".reverse() == "cba"
+
+Polish.strings
 {
     letters: 'abcdefghijklmnopqrstuvwxyz',
     letters_all: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ',
@@ -103,4 +92,12 @@ strings
 }
 </pre>
 
+####extra
+<pre>
+//stringifies and then parses
+Polish.clone
+</pre>
+
+###note about modifications:
+This library has been injected into unit tests for jQuery, backbone, and bootstrap and has not caused any issues
 ###License: BSD
