@@ -94,3 +94,5 @@ strings
     digits: '0123456789'
 }
 </pre>
+
+###License: MIT
