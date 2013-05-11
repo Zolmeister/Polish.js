@@ -95,4 +95,4 @@ strings
 }
 </pre>
 
-###License: MIT
+###License: BSD
