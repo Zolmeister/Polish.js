@@ -2,10 +2,7 @@ require('./polish')
 
 describe("Zappy", function () {
     it("has strings", function () {
-        expect(typeof strings).toBe('object')
-    })
-    it("scopes up abs", function () {
-        expect(typeof abs).toBe('function')
+        expect(typeof Polish.strings).toBe('object')
     })
     it("adds range", function () {
         expect(range(1, 20, 2) instanceof Array).toBe(true)
@@ -16,8 +13,8 @@ describe("Zappy", function () {
                 'c': 1
             }
         }
-        expect(clone(obj) === obj).toBe(false)
-        expect(clone(obj).toString() === obj.toString()).toBe(true)
+        expect(Polish.clone(obj) === obj).toBe(false)
+        expect(Polish.clone(obj).toString() === obj.toString()).toBe(true)
     })
     it("zips", function () {
         //TODO: actually test zipping
@@ -25,8 +22,8 @@ describe("Zappy", function () {
         expect(zip(zip(arr)).toString() === arr.toString()).toBe(true)
     })
     it("sums", function () {
-        expect(sum([1, 2, 3])).toBe(6)
-        expect(sum(1, 2, 3)).toBe(6)
+        expect(Math.sum([1, 2, 3])).toBe(6)
+        expect(Math.sum(1, 2, 3)).toBe(6)
     })
     describe("Arrays", function(){
         it("pops indexes", function(){
@@ -93,13 +90,13 @@ describe("Zappy", function () {
     })
     describe("itertools", function () {
         it("combos", function () {
-            expect(itertools.combinations([1, 2, 3, 4, 5], 3).length).toBe(10)
+            expect(Polish.combinations([1, 2, 3, 4, 5], 3).length).toBe(10)
         })
         it("combos with replacement", function () {
-            expect(itertools.combinations_with_replacement([1, 2, 3, 4, 5], 3).length).toBe(125)
+            expect(Polish.combinationsReplace([1, 2, 3, 4, 5], 3).length).toBe(125)
         })
         it("permutes", function () {
-            expect(itertools.permutations([1, 2, 3, 4]).length).toBe(24)
+            expect(Polish.permutations([1, 2, 3, 4]).length).toBe(24)
         })
     })
     describe("reverse functions", function(){

@@ -57,6 +57,14 @@ itertools.combinations_with_replacement("abc",2) == [['a','a'],['a','b'], ... , 
 itertools.permutations([1,2]) == [[1,2],[2,1]]
 </pre>
 
+####Array operations
+<pre>
+list = [1,2,3,4,5]
+list.pop(1) == 2 //list == [1,3,4,5]    pops index
+list.remove(2) //list == [1,3,4,5]      removes element
+list.insert(2,5) //list == [1,2,5,3,4,5]
+</pre>
+
 ####Python list/string selectors
 <pre>
 list = [1,2,3,4,5]
