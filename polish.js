@@ -163,26 +163,28 @@
     }
 
     //http://underscorejs.org/docs/underscore.html
+    function range(start, stop, step) {
+        if (arguments.length <= 1) {
+            stop = start || 0
+            start = 0
+        }
+        step = arguments[2] || 1
+
+        var len = Math.max(Math.ceil((stop - start) / step), 0)
+        var idx = 0
+        var range = new Array(len)
+
+        while (idx < len) {
+            range[idx++] = start
+            start += step
+        }
+
+        return range
+    }
+    
     Object.defineProperty(global, 'range', {
         get: function () {
-            return function (start, stop, step) {
-                if (arguments.length <= 1) {
-                    stop = start || 0
-                    start = 0
-                }
-                step = arguments[2] || 1
-
-                var len = Math.max(Math.ceil((stop - start) / step), 0)
-                var idx = 0
-                var range = new Array(len)
-
-                while (idx < len) {
-                    range[idx++] = start
-                    start += step
-                }
-
-                return range
-            }
+            return range
         }
     })
 
@@ -227,7 +229,7 @@
     Object.defineProperty(Array.prototype, 'choice', {
         get: function () {
             return function () {
-                return this[global.Math.randInt(this.length - 1)]
+                return this[Math.randInt(this.length - 1)]
             }
         }
     })
@@ -345,7 +347,7 @@
         }
 
         var ret = []
-        var indicies = global.range(start, end, step)
+        var indicies = range(start, end, step)
         for (var i = 0, l = indicies.length; i < l; i++) {
             var index = indicies[i]
             ret.push(select.bind(this)(index))
