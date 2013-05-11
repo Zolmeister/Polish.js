@@ -113,44 +113,44 @@ describe("Zappy", function () {
         var list = [1,2,3,4,5]
         var str = 'abcdef'
         it("selectcs -1", function(){
-            expect(list[-1]).toBe(list.z(-1))
+            expect(list[-1]).toBe(list.g(-1))
             expect(str[-1]).toBe('f')
         })
         it("selects positive", function(){
-            expect(list.z('1')).toBe(2)
-            expect(str.z('1')).toBe('b')
+            expect(list.g('1')).toBe(2)
+            expect(str.g('1')).toBe('b')
         })
         it("selects negative", function(){
-            expect(list.z('-1')).toBe(5)
-            expect(str.z('-1')).toBe('f')
+            expect(list.g('-1')).toBe(5)
+            expect(str.g('-1')).toBe('f')
         })
         it("selects 0", function(){
-            expect(list.z('0')).toBe(1)
-            expect(str.z('0')).toBe('a')
+            expect(list.g('0')).toBe(1)
+            expect(str.g('0')).toBe('a')
         })
         it("selects positive range without end", function(){
-            expect(list.z('1:').toString()).toBe(list.slice(1).toString())
-            expect(str.z('1:')).toBe(str.substring(1))
+            expect(list.g('1:').toString()).toBe(list.slice(1).toString())
+            expect(str.g('1:')).toBe(str.substring(1))
         })
         it("selects positive range without beginning", function(){
-            expect(list.z(':2').toString()).toBe(list.slice(0,2).toString())
-            expect(str.z(':2')).toBe(str.substring(0,2))
+            expect(list.g(':2').toString()).toBe(list.slice(0,2).toString())
+            expect(str.g(':2')).toBe(str.substring(0,2))
         })
         it("selects positive range", function(){
-            expect(list.z('1:3').toString()).toBe(list.slice(1,3).toString())
-            expect(str.z('1:3')).toBe(str.substring(1,3))
+            expect(list.g('1:3').toString()).toBe(list.slice(1,3).toString())
+            expect(str.g('1:3')).toBe(str.substring(1,3))
         })
         it("selects negative range", function(){
-            expect(str.z('-3:-1')).toBe('de')
+            expect(str.g('-3:-1')).toBe('de')
         })
         it("selects mixed range", function(){
-            expect(str.z('2:-1')).toBe('cde')
+            expect(str.g('2:-1')).toBe('cde')
         })
         it("reverses", function(){
-            expect(str.z('::-1')).toBe('fedcba')
+            expect(str.g('::-1')).toBe('fedcba')
         })
         it("selects positive range and reverses", function(){
-            expect(str.z('3:1:-1')).toBe('dc')
+            expect(str.g('3:1:-1')).toBe('dc')
         })
     })
 })

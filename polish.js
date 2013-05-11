@@ -1,4 +1,4 @@
-/* Polish.js v0.1.0 | Zolmeister | MIT License*/
+/* Polish.js v0.1.1 | Zolmeister | MIT License*/
 (function () {
     var global = this
 
@@ -332,13 +332,13 @@
         return ret.join('')
     }
 
-    Object.defineProperty(Array.prototype, 'z', {
+    Object.defineProperty(Array.prototype, 'g', {
         get: function () {
             return select
         }
     })
 
-    Object.defineProperty(String.prototype, 'z', {
+    Object.defineProperty(String.prototype, 'g', {
         get: function () {
             return select
         }
