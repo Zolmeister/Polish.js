@@ -1,0 +1,19 @@
+{
+  "name": "polish",
+  "version": "0.1.0",
+  "description": "Making JavaScript better",
+  "main": "polish.js",
+  "scripts": {
+    "test": "jasmine-node polish.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zolmeister/Polish.js"
+  },
+  "keywords": [
+    "features"
+  ],
+  "author": "Zolmeister",
+  "license": "BSD",
+  "readmeFilename": "README.md"
+}
