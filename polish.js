@@ -1,4 +1,4 @@
-/* Polish.js v0.2.0 | Zolmeister | MIT License*/
+/* Polish.js v0.2.0 | Zolmeister | BSD License*/
 (function () {
     var global = this
 
