@@ -1,4 +1,5 @@
 ![Polish.js](https://raw.github.com/Zolmeister/Polish.js/master/polish-logo.png)
+(the verb, not the language)
 Making JavaScript better
 ========================
 
