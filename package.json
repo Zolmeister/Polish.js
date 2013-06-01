@@ -1,6 +1,6 @@
 {
   "name": "polish",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Making JavaScript better",
   "main": "polish.js",
   "scripts": {
