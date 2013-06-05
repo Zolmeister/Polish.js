@@ -143,6 +143,10 @@ describe("Zappy", function () {
         it("selects mixed range", function(){
             expect(str.g('2:-1')).toBe('cde')
         })
+        it("doesn't overselect large numbers", function(){
+            expect(str.g('-30:')).toBe('abcdef')
+            expect(str.g(':30')).toBe('abcdef')
+        })
         it("reverses", function(){
             expect(str.g('::-1')).toBe('fedcba')
         })

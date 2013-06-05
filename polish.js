@@ -1,4 +1,4 @@
-/* Polish.js v0.2.0 | Zolmeister | BSD License*/
+/* Polish.js v0.2.2 | Zolmeister | BSD License*/
 (function () {
     var global = this
 
@@ -331,7 +331,12 @@
             return parseInt(e, 10)
         })
         var start = parseInt(sel[0], 10) || 0
+        start = start < 0 ? Math.max(start, -this.length) : Math.min(start, this.length)
         var end = parseInt(sel[1], 10) || this.length
+        end = end < 0 ? Math.max(end, -this.length) : Math.min(end, this.length)
+        if(start<0 && end>0){
+            end = 0
+        }
         var step = parseInt(sel[2], 10) || 1
         if (step < 0) {
             if (start < end) {
