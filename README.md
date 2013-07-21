@@ -23,9 +23,6 @@ require('polish')
 ##Features
 ####Array operations
 
-##### Array.prototype.remove()
-##### Array.prototype.insert()
-
 ````javascript
 list = [1,2,3,4,5]
 list.pop(1) == 2 //    list == [1,3,4,5]    pops element at index
@@ -42,12 +39,6 @@ Math.max([1,2,3]) == 3
 
 ####Randomness functions
 
-##### Math.randInt()
-##### String.prototype.choice()
-##### String.prototype.shuffle()
-##### Array.prototype.choice()
-##### Array.prototype.shuffle()
-
 ````javascript
 Math.randInt(100) // random int from 0,100 inclusive
 [1,2,3].choice() //random object from list
@@ -58,21 +49,16 @@ Math.randInt(100) // random int from 0,100 inclusive
 
 ####Global functions
 
-##### range()
 ````javascript
 range(1,4) == [1,2,3]
 range(6,1,-2) == [6,4,2]
 ````
 
-##### zip()
 ````javascript
 zip([[1,2],[3,4],[5,6]]) == [[1,3,5],[2,4,6]]
 ````
 
 ####Python-inspired list/string selectors
-
-##### Array.prototype.g()
-##### String.prototype.g()
 
 ````javascript
 list = [1,2,3,4,5]
@@ -91,9 +77,6 @@ list[-1] == 5
 ````
 
 ####Itertools
-
-##### Polish.combinations()
-##### Polish.combinationsReplace()
 
 ````javascript
 Polish.combinations([1,2,3],2) == [[1,2],[1,3],[2,3]]
@@ -129,5 +112,23 @@ Polish.clone
 
 ###Compatibility / side-effects:
 This library has been injected into unit tests for jQuery, backbone, and bootstrap and has not caused any issues.
+
+### Summary of globals
+
+
+##### Array.prototype.remove()
+##### Array.prototype.insert()
+##### Math.randInt()
+##### String.prototype.choice()
+##### String.prototype.shuffle()
+##### Array.prototype.choice()
+##### Array.prototype.shuffle()
+##### range()
+##### zip()
+##### Array.prototype.g()
+##### String.prototype.g()
+##### Polish.combinations()
+##### Polish.combinationsReplace()
+
 
 ###License: BSD
