@@ -1,56 +1,77 @@
-![Polish.js](https://raw.github.com/Zolmeister/Polish.js/master/polish-logo.png)
-(the verb, not the language)
-Making JavaScript better
-========================
+#    ![Polish.js](http://image.spreadshirt.com/image-server/v1/compositions/2755722/views/1,width=75,height=75,appearanceId=1.png/polish-eagle-crest_design.png) Polish.js
+
+> *(the verb, not the language)*
+
+### Making JavaScript more like Polish
 
 ##Install (note, Polish.js overrides default behavior)
 ####node.js
-<pre>
+````
 npm install polish
 require('polish')
-</pre>
+````
 
 ####browser
-<pre>
+````html
 //browser (1.45 KB minified & gzipped)
 &lt;script src='polish.js'>&lt;/script>
-</pre>
+````
 
 ##Features
 ####Array operations
-<pre>
+
+##### Array.prototype.remove()
+##### Array.prototype.insert()
+
+````javascript
 list = [1,2,3,4,5]
-list.pop(1) == 2 //list == [1,3,4,5]    pops index
-list.remove(2) //list == [1,3,4,5]      removes element
-list.insert(2,5) //list == [1,2,5,3,4,5]
-</pre>
+list.pop(1) == 2 //    list == [1,3,4,5]    pops element at index
+list.remove(2) //    list == [1,3,4,5]      removes element by value
+list.insert(2,5) //    list == [1,2,5,3,4,5]
+````
 
 ####Use Math min/max with lists
-<pre>
+
+````javascript
 Math.min([1,2,3]) == 1
 Math.max([1,2,3]) == 3
-</pre>
+````
 
 ####Randomness functions
-<pre>
+
+##### Math.randInt()
+##### String.prototype.choice()
+##### String.prototype.shuffle()
+##### Array.prototype.choice()
+##### Array.prototype.shuffle()
+
+````javascript
 Math.randInt(100) // random int from 0,100 inclusive
 [1,2,3].choice() //random object from list
 "abc".choice() //random letter from string
 [1,2,3].shuffle() //shuffles array in place
 "abc".shuffle() //returns new shuffled string
-</pre>
+````
 
-####global functions
-<pre>
+####Global functions
+
+##### range()
+````javascript
 range(1,4) == [1,2,3]
 range(6,1,-2) == [6,4,2]
-</pre>
-<pre>
-zip([[1,2],[3,4],[5,6]]) == [[1,3,5],[2,4,6]]
-</pre>
+````
 
-####Python list/string selectors
-<pre>
+##### zip()
+````javascript
+zip([[1,2],[3,4],[5,6]]) == [[1,3,5],[2,4,6]]
+````
+
+####Python-inspired list/string selectors
+
+##### Array.prototype.g()
+##### String.prototype.g()
+
+````javascript
 list = [1,2,3,4,5]
 str = "abcdef"
 
@@ -62,27 +83,31 @@ str.g('-3:-1') == "de"
 list.g('::-1') == [5,4,3,2,1]
 str.g('3:1:-1') == "dc"
 
-//special -1 selector
+//special -1 selector (picks item from end of list)
 list[-1] == 5
-</pre>
+````
 
 ####Itertools
-<pre>
+
+##### Polish.combinations()
+##### Polish.combinationsReplace()
+
+````javascript
 Polish.combinations([1,2,3],2) == [[1,2],[1,3],[2,3]]
 Polish.combinationsReplace("abc",2) == [['a','a'],['a','b'], ... , ['c','c']]
 Polish.permutations([1,2]) == [[1,2],[2,1]]
-</pre>
+````
 
 ####Math functions
-<pre>
+````javascript
 Math.sum([1,2,3]) == 6
 Math.factorial(10) == 3628800
 Math.isPrime(23) == true
 Math.leastFactor(25) == 5
-</pre>
+````
 
 ####Strings
-<pre>
+````javascript
 "abc".reverse() == "cba"
 
 Polish.strings
@@ -91,14 +116,15 @@ Polish.strings
     letters_all: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ',
     digits: '0123456789'
 }
-</pre>
+````
 
-####extra
-<pre>
+####Extra
+````javascript
 //stringifies and then parses
 Polish.clone
-</pre>
+````
 
-###note about modifications:
-This library has been injected into unit tests for jQuery, backbone, and bootstrap and has not caused any issues
+###Compatibility / side-effects:
+This library has been injected into unit tests for jQuery, backbone, and bootstrap and has not caused any issues.
+
 ###License: BSD
