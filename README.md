@@ -2,19 +2,22 @@
 
 > *(the verb, not the language)*
 
-### Making JavaScript more like Polish
+#### Making JavaScript more like Polish
 
-##Install (note, Polish.js overrides default behavior)
+## Install (note, Polish.js overrides default behavior)
 ####node.js
-````
+````bash
 npm install polish
+````
+
+````javascript
 require('polish')
 ````
 
 ####browser
 ````html
-//browser (1.45 KB minified & gzipped)
-&lt;script src='polish.js'>&lt;/script>
+<!-- browser (1.45 KB minified & gzipped) -->
+<script src="https://raw.github.com/Zolmeister/Polish.js/master/polish.min.js"></script>
 ````
 
 ##Features
