@@ -1,8 +1,8 @@
-#    ![Polish.js](http://image.spreadshirt.com/image-server/v1/compositions/2755722/views/1,width=75,height=75,appearanceId=1.png/polish-eagle-crest_design.png) Polish.js
+![Polish.js](https://raw.github.com/Zolmeister/Polish.js/master/polish-logo.png)
+A JavaScript Utility Library
+============================
 
 > *(the verb, not the language)*
-
-#### Making JavaScript more like Polish
 
 ## Install (note, Polish.js overrides default behavior)
 ####node.js
