@@ -17,7 +17,7 @@ require('polish')
 ####browser
 ````html
 <!-- browser (1.45 KB minified & gzipped) -->
-<script src="https://raw.github.com/Zolmeister/Polish.js/master/polish.min.js"></script>
+<script src="polish.min.js"></script>
 ````
 
 ##Features
